@@ -2,11 +2,13 @@
 #include <sstream>
 using namespace std;
 void quicksort(int *&ar,int from,int to,int base){
-	if(!from<to){
+	if(!(from<to)){
 		return;
 	}
+	 
 	int fromind=from;
 	int toind=to;
+
 	while(fromind<=toind){
 		while(ar[fromind]<base)
 		{
@@ -21,9 +23,7 @@ void quicksort(int *&ar,int from,int to,int base){
 			toind--;
 		}
 	}
-	 for(int i=0;i<n;i++){
-             cout<<arr[i]<<" ";
-             }cout<<"\n";
+	
 	quicksort(ar,from,fromind-1,ar[from]);
 	quicksort(ar,fromind,to,ar[to]);
 	
