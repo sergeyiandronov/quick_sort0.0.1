@@ -30,11 +30,11 @@ void quicksort(int *&ar,int from,int to,int base){
 }
 int main() {
    unsigned  int n;
-
+   char e;
     string line;
     getline(cin,line);
     istringstream numstream(line);
-    if(!(numstream>>n)){
+    if(!(numstream>>n)||!(n>0)){
         cout<<"An error has occuried while reading input data.";
         exit(0);
     }
@@ -49,6 +49,11 @@ int main() {
             exit(0);
         }
 
+    }
+    if(arrstream>>e){
+         cout<<"An error has occuried while reading input data.";
+            delete[] arr;
+            exit(0);	
     }
 
     
